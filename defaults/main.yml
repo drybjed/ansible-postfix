@@ -11,25 +11,22 @@
 # templates.
 
 
-# postfix capabilities
-# ~~~~~~~~~~~~~~~~~~~~
-# List of active Postfix capabilities. By default Postfix is configured with
-# local mail disabled, all mail is sent to local MX server configured in DNS.
-postfix: [ 'null' ]
+# postfix capabilities : list
+#    Active Postfix capabilities. By default Postfix is configured with
+#    local mail disabled, all mail is sent to local MX server configured in DNS.
 # .. include:: ../docs/parts/defaults/postfix_capabilities.rst
 #    :start-line: 5
+postfix: [ 'null' ]
 
 
-# postfix_relayhost
-# ~~~~~~~~~~~~~~~~~
-# Address of mail host this host should relay all mail to instead of delivering
-# it directly. (Automatic configuration)
+# postfix_relayhost : string
+#    Address of mail host this host should relay all mail to instead of delivering
+#    it directly. (Automatic configuration)
 postfix_relayhost: False
 
 
-# postfix_mailname
-# ~~~~~~~~~~~~~~~~
-# Mail host name configured in /etc/mailname
+# postfix_mailname : string
+#    Mail host name configured in /etc/mailname
 postfix_mailname: '{{ ansible_fqdn }}'
 
 
